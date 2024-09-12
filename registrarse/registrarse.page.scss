@@ -1,0 +1,75 @@
+
+.logo-icon {
+  height: 40px; 
+  width: auto; 
+}
+.animated-title {
+  font-size: 24px; 
+  color: #ffc400; 
+  animation: zoomInOut 3s infinite; 
+}
+
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1); 
+  }
+  50% {
+    transform: scale(1.2); 
+  }
+  100% {
+    transform: scale(1); 
+  }
+}
+.animated-title {
+    font-size: 24px; 
+    color: #ffc400; 
+    animation: zoomInOut 3s infinite; 
+    text-align: center;
+    padding-right: 20%;
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0;
+  }
+  
+  .social-icon {
+    font-size: 24px;
+    margin: 0 10px;
+    color: #000000; 
+    animation: zoomInOut 3s infinite; 
+  }
+  
+  
+  @keyframes zoomInOut {
+    0% {
+      transform: scale(1); 
+    }
+    50% {
+      transform: scale(1.2); 
+    }
+    100% {
+      transform: scale(1); 
+    }
+  }
+  .botonregreso{
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;     
+    height: 35vh;        
+  }
+  
+  ion-button {
+    margin: 10px 0; 
+    --background: darkorange;
+    justify-content: center; 
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;     
+    
+  }

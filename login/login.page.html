@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button>
+        <img src="assets/imagenes/logoapp.jpeg" alt="Logo" class="logo-icon" />
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title class="animated-title">
+      TeLlevoAPP
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <img alt="logoduoc" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Logo_DuocUC.svg/2560px-Logo_DuocUC.svg.png" />
+    <ion-card-header>
+      <ion-card-title>Aplicacion Duoc</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Podras ingresar al portal con tus credenciales
+    </ion-card-content>
+  </ion-card>
+
+
+  <form (ngSubmit)="goToIndex()">
+    <ion-item>
+      <ion-label position="floating">Usuario</ion-label>
+      <ion-input type="text" [(ngModel)]="data.user" name="usuario" required></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input type="password" [(ngModel)]="data.pw" name="password" required></ion-input>
+    </ion-item>
+  
+    <ion-button expand="block" type="submit">Ingresar</ion-button>
+    <ion-button class="Regreso" (click)="goToHome()">Regresar</ion-button>
+  </form>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <div class="social-icons">
+      <ion-icon name="logo-twitter" (click)="openLink('https://twitter.com')" class="social-icon"></ion-icon>
+      <ion-icon name="logo-whatsapp" (click)="openLink('https://wa.me/')" class="social-icon"></ion-icon>
+      <ion-icon name="logo-instagram" (click)="openLink('https://instagram.com')" class="social-icon"></ion-icon>
+      <ion-icon name="logo-snapchat" (click)="openLink('https://snapchat.com')" class="social-icon"></ion-icon>
+    </div>
+  </ion-toolbar>
+</ion-footer>

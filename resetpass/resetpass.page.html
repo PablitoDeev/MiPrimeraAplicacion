@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button>
+        <img src="assets/imagenes/logoapp.jpeg" alt="Logo" class="logo-icon" />
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title class="animated-title">
+      TeLlevoAPP
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Restablecer Contraseña</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Restablecimiento de Contraseña</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <form (ngSubmit)="onSubmit()" #resetForm="ngForm">
+        <ion-item>
+          <ion-label position="floating">Nombre de Usuario</ion-label>
+          <ion-input type="text" [(ngModel)]="formData.username" name="username" required></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Contraseña Anterior</ion-label>
+          <ion-input type="password" [(ngModel)]="formData.oldPassword" name="oldPassword" required></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Contraseña Nueva</ion-label>
+          <ion-input type="password" [(ngModel)]="formData.newPassword" name="newPassword" required></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Confirmar Contraseña Nueva</ion-label>
+          <ion-input type="password" [(ngModel)]="formData.confirmNewPassword" name="confirmNewPassword" required></ion-input>
+        </ion-item>
+
+        <ion-button expand="full" type="submit">Restablecer Contraseña</ion-button>
+        <ion-button alt="botonregreso" (click)="goToHome()">Regresar</ion-button>
+
+      </form>
+    </ion-card-content>
+  </ion-card>
+
+  <img alt="logoduoc2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Logo_DuocUC.svg/2560px-Logo_DuocUC.svg.png" />
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <div class="social-icons">
+      <ion-icon name="logo-twitter" (click)="openLink('https://twitter.com')" class="social-icon"></ion-icon>
+      <ion-icon name="logo-whatsapp" (click)="openLink('https://wa.me/')" class="social-icon"></ion-icon>
+      <ion-icon name="logo-instagram" (click)="openLink('https://instagram.com')" class="social-icon"></ion-icon>
+      <ion-icon name="logo-snapchat" (click)="openLink('https://snapchat.com')" class="social-icon"></ion-icon>
+    </div>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button>
+        <img src="assets/imagenes/logoapp.jpeg" alt="Logo" class="logo-icon" />
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title class="animated-title">
+      TeLlevoAPP
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+
+  <ion-card>
+    <img alt="logoduoc" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Logo_DuocUC.svg/2560px-Logo_DuocUC.svg.png" />
+    <ion-card-header>
+      <ion-card-title>Aplicacion Drive</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Bienvenido a nuestro portal de TeLlevoAPP
+    </ion-card-content>
+  </ion-card>
+<div class="ionbotones">
+  <ion-button (click)="goToLogin()">Login</ion-button>
+
+  <ion-button (click)="goToResetpass()">Restablecer Contraseña</ion-button>
+
+  <ion-button (click)="goToRegistrarse()">Registrarse</ion-button>
+
+</div>
+
+<div class="video-background">
+  <video autoplay loop muted>
+    <source src="assets/videos/duocinicio.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <div class="social-icons">
+      <ion-icon name="logo-twitter" (click)="openLink('https://twitter.com')" class="social-icon"></ion-icon>
+      <ion-icon name="logo-whatsapp" (click)="openLink('https://wa.me/')" class="social-icon"></ion-icon>
+      <ion-icon name="logo-instagram" (click)="openLink('https://instagram.com')" class="social-icon"></ion-icon>
+      <ion-icon name="logo-snapchat" (click)="openLink('https://snapchat.com')" class="social-icon"></ion-icon>
+    </div>
+  </ion-toolbar>
+</ion-footer>
